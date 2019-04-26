@@ -26,6 +26,7 @@ import org.json.JSONObject;
 
 public class ForgotPasswordActivity extends BaseActivity {
 
+    private EditText mForgotPasswordEditTextVendorCode;
     private EditText mForgotPasswordEditTextUserName;
     //private EditText mForgotPasswordEditTextEmail;
     private Button mForgotPasswordButtonSubmit;
@@ -54,12 +55,15 @@ public class ForgotPasswordActivity extends BaseActivity {
     }
 
     private void checkValidations() {
+        String vendorCode = mForgotPasswordEditTextVendorCode.getText().toString();
         String userName = mForgotPasswordEditTextUserName.getText().toString();
         Conditions.hideKeyboard(ForgotPasswordActivity.this);
-        if (userName.isEmpty()) {
+        if (vendorCode.isEmpty()) {
+            mForgotPasswordEditTextVendorCode.setError("Field can not be empty");
+        } else if (userName.isEmpty()) {
             mForgotPasswordEditTextUserName.setError("Field can not be empty");
         } else {
-            doForgot(userName);
+            doForgot(vendorCode, userName);
         }
         /*String email = mForgotPasswordEditTextEmail.getText().toString();
         Conditions.hideKeyboard(ForgotPasswordActivity.this);
@@ -71,7 +75,7 @@ public class ForgotPasswordActivity extends BaseActivity {
 
     }
 
-    private void doForgot(String userName) {
+    private void doForgot(String vendorCode, String userName) {
         //private void doForgot(String email) {
 
         showBusyProgress();
@@ -81,6 +85,7 @@ public class ForgotPasswordActivity extends BaseActivity {
                 jo.put("APIKEY", Constants.APP_KEY__);
                 jo.put("SECRETKEY", Constants.APP_SECRET__);
                 jo.put("Username", userName);
+                //jo.put("Vendorcode", vendorCode);
                 //jo.put("Email", email);
 
             } catch (JSONException e) {
@@ -139,6 +144,7 @@ public class ForgotPasswordActivity extends BaseActivity {
     }
 
     private void assignViews() {
+        mForgotPasswordEditTextVendorCode = (EditText) findViewById(R.id.forgotPassword_editText_vendorcode);
         mForgotPasswordEditTextUserName = (EditText) findViewById(R.id.forgotPassword_editText_username);
         //mForgotPasswordEditTextEmail= (EditText) findViewById(R.id.forgotPassword_editText_email);
         mForgotPasswordButtonSubmit = (Button) findViewById(R.id.forgotPassword_button_submit);
