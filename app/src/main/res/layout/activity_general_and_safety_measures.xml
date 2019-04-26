@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.GeneralAndSafetyMeasures">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/app_normal_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/app_normal_margin">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasures_textView_PrevailingSLA"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Prevailing SLA(In % Wise)" />
+
+                <EditText
+                    android:id="@+id/generalAndSafetyMeasures_editText_PrevailingSLA"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="Enter Prevailing SLA(In % Wise) "
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_SiteBoundaryStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_SiteBoundaryStatus"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Site Boundary Status" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_SiteBoundaryStatus_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_SiteHygieneVegitationStatus"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Site Hygiene/Vegitation Status*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_SiteHygieneVegitationStatus_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_GateLock"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Gate Lock*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_GateLock_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_DGRoomLock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_DGRoomLock"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="DG Room Lock" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_DGRoomLock_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FireBucket"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Fire Bucket*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FireBucket_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_SecurityStatus24x7"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Security Status (24x7)*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_SecurityStatus24x7_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_NoofSecurityPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_NoofSecurityPerson"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="No of Security Person" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_NoofSecurityPerson_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_MobileNumberofSecurity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_MobileNumberofSecurity"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Mobile Number of Security" />
+
+                <EditText
+                    android:id="@+id/generalAndSafetyMeasure_editText_MobileNumberofSecurity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="Enter Mobile Number of Security "
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:textAlignment="viewStart" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_CaretakerStatusUpOnEmergency"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Caretaker Status (Up-On Emergency)*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_CaretakerStatusUpOnEmergency_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_MobileNumberofCaretaker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_MobileNumberofCaretaker"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Mobile Number of Caretaker" />
+
+                <EditText
+                    android:id="@+id/generalAndSafetyMeasure_editText_MobileNumberofCaretaker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="Enter Mobile Number of Caretaker "
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_IsSecurityCaretakeristheOwnerofSite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_IsSecurityCaretakeristheOwnerofSite"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Is Security/Caretaker is the Owner of Site" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_IsSecurityCaretakeristheOwnerofSite_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_SalaryofSecurityCaretaker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_SalaryofSecurityCaretaker"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Salary of Security/Caretaker" />
+
+                <EditText
+                    android:id="@+id/generalAndSafetyMeasure_editText_SalaryofSecurityCaretaker"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="Enter Salary of Security/Caretaker "
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="viewStart" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_CaretakerSecuritySalaryPaidBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_CaretakerSecuritySalaryPaidBy"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Caretaker/Security Salary Paid By" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_CaretakerSecuritySalaryPaidBy_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_agencyNameSalaryPaid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_agencyNameSalaryPaid"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Agency Name(Salary Paid By)" />
+
+                <EditText
+                    android:id="@+id/generalAndSafetyMeasure_editText_agencyNameSalaryPaid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="Enter Agency Name "
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textAlignment="viewStart" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_CaretakerSecurityStayinginSite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_CaretakerSecurityStayinginSite"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Caretaker/Security Staying in Site" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_CaretakerSecurityStayinginSite_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_NumberofEarthPit"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Number of Earth Pit*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_NumberofEarthPit_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_LightningArresterStatus"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Lightning Arrester Status" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_LightningArresterStatus_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_FencingCompoundWallCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FencingCompoundWallCondition"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Fencing/Compound Wall Condition" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FencingCompoundWallCondition_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_NumberoffreeODPaltformAvailable"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Number of free OD Paltform Available" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_NumberoffreeODPaltformAvailable_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_AlarmMultipluxerStatus"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Alarm Multipluxer Status*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_AlarmMultipluxerStatus_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_DoorOpenSensor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_DoorOpenSensor"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Door Open Sensor" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_DoorOpenSensor_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_FuelSensor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FuelSensor"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Fuel Sensor" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FuelSensor_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/generalAndSafetyMeasure_linearLayout_FireSmokeSensor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FireSmokeSensor"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Fire and Smoke Sensor" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FireSmokeSensor_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FireExtuinguisher"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:singleLine="false"
+                    android:text="Fire Extuinguisher" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_FireExtuinguisher_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_siteAccessStatus"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Site Access status" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_siteAccessStatus_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_noOfFireExtuinguisher"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="No of Fire Extuinguisher*" />
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_noOfFireExtuinguisher_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linearLayout_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/generalAndSafetyMeasure_textView_Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_min_margin"
+                    android:text="#1"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="#a40404" />
+
+                <LinearLayout
+                    android:id="@+id/generalAndSafetyMeasure_linearLayout_FireExtuinguisherType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/generalAndSafetyMeasure_textView_FireExtuinguisherType"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Fire Extuinguisher Type" />
+
+                    <TextView
+                        android:id="@+id/generalAndSafetyMeasure_textView_FireExtuinguisherType_val"
+                        style="@style/MyTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.6"
+                        android:hint="Select"
+                        android:textAlignment="viewStart"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/generalAndSafetyMeasure_linearLayout_FireExtuinguisherExpiryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/generalAndSafetyMeasure_textView_FireExtuinguisherExpiryDate"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Fire Extuinguisher Expiry Date" />
+
+                    <EditText
+                        android:id="@+id/generalAndSafetyMeasure_editText_FireExtuinguisherExpiryDate"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:focusable="false"
+                        android:hint="DD/MMM/YYYY"
+                        android:inputType="none"
+                        android:textAlignment="viewStart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/generalAndSafetyMeasure_button_previousReading"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:layout_marginTop="@dimen/app_normal_margin"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:text="Prev Reading"
+                        android:textColor="@color/whitesmoke"
+                        android:textSize="18sp"
+                        android:visibility="invisible" />
+                    <!--android:textAllCaps="false"-->
+                    <Button
+                        android:id="@+id/generalAndSafetyMeasure_button_nextReading"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:layout_marginTop="@dimen/app_normal_margin"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:text="Next Reading"
+                        android:textColor="@color/whitesmoke"
+                        android:textSize="18sp" />
+                    <!--android:textAllCaps="false"-->
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

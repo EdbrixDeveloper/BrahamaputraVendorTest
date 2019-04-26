@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1051072461605",
+    "firebase_url": "https://brahamaputravendor.firebaseio.com",
+    "project_id": "brahamaputravendor",
+    "storage_bucket": "brahamaputravendor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051072461605:android:15748aaad14c4205",
+        "android_client_info": {
+          "package_name": "com.brahamaputra.mahindra.brahamaputravendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051072461605-h0d15qntnqnir68345ai22phhf30elnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANBqhp8-6rINrCm1Om3GzlcpYSukc9cc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051072461605-h0d15qntnqnir68345ai22phhf30elnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

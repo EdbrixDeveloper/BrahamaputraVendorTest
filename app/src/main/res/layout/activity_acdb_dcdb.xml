@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ACDB_DCDB">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/app_normal_margin"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/acdb_dcdb_textView_NumberofACDB"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Number of ACDB*" />
+
+                <TextView
+                    android:id="@+id/acdb_dcdb_textView_NumberofACDB_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutSolarPowerSystemContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/acdb_dcdb_textView_ACDBRatingAMP"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="ACDB Rating ( AMP)" />
+
+                    <EditText
+                        android:id="@+id/acdb_dcdb_editText_ACDBRatingAMP"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter ACDB Rating ( AMP) "
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textAlignment="viewStart" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/acdb_dcdb_textView_NumberofDCDB"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Number of DCDB*" />
+
+                <TextView
+                    android:id="@+id/acdb_dcdb_textView_NumberofDCDB_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acdb_dcdb_linearLayout_FreeCoolingDeviseStausFCU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/acdb_dcdb_textView_FreeCoolingDeviseStausFCU"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Free Cooling Devise Staus (FCU)" />
+
+                <TextView
+                    android:id="@+id/acdb_dcdb_textView_FreeCoolingDeviseStausFCU_val"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.6"
+
+                    android:hint="Select"
+                    android:textAlignment="viewStart"></TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

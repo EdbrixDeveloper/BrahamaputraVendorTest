@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PreventiveMaintenanceSiteEarthingCheckPointsActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/app_min_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_allNutOrBoltsAreIntact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_allNutOrBoltsAreIntact"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="All Nut/Bolts are Intact" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_allNutOrBoltsAreIntactVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_igbOrOgbStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_igbOrOgbStatus"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="IGB/OGB Status" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_igbOrOgbStatusVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_lightningArresterStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_lightningArresterStatus"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Lightning Arrester Status" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_lightningArresterStatusVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_numberOfEarthPit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_numberOfEarthPit"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Number of Earth PIT*" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_numberOfEarthPitVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_numberOfEarthPitVisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_numberOfEarthPitVisible"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Number of Earth PIT Visible" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_numberOfEarthPitVisibleVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_executeEarthPitTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_executeEarthPitTest"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Execute Earth Pit Test" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_executeEarthPitTestVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_executeEarthPitTestFields"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo1"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 01"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 01"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo2"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 02"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 02"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo3"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 03"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 03"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo4"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 04"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 04"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo5"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 05"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 05"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo6"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 06"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 06"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo7"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 07"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 07"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_valuePITNo8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_valuePITNo8"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Value in PIT No 08"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_valuePITNo8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Value in PIT No 08"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_earthNuetralVoltage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_earthNuetralVoltage"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Earth to Neutral Voltage"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_earthNuetralVoltage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Neutral Voltage"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_observationConclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_observationConclusion"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Observation &amp; Conclusion"
+                        android:textColor="@color/colorBlueLink" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_observationConclusion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Observation &amp; Conclusion"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_registerFault"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Register Fault" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_registerFaultVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_typeOfFault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_typeOfFault"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Type of Fault" />
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_typeOfFaultVal"
+                    style="@style/MyTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.6"
+                    android:hint="Select"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_linearLayout_uploadPhotoOfRegisterFault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/app_min_padding"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_uploadPhotoOfRegisterFault"
+                    style="@style/FontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Upload Photo"
+                    android:textColor="@color/colorBlueLink" />
+
+                <ImageView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_button_uploadPhotoOfRegisterFault"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.3"
+                    android:clickable="true"
+                    android:padding="2dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/baseline_photo_camera_black_18dp" />
+
+                <ImageView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_button_uploadPhotoOfRegisterFaultView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.3"
+                    android:clickable="true"
+                    android:padding="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/view_image"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linearLayout_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/app_normal_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_earthingPitNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/app_min_margin"
+                    android:text="#1"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="#a40404" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/app_min_padding"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_textView_earthPitValue"
+                        style="@style/FontStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="Earth PIT Value" />
+
+                    <EditText
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_editText_earthPitValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="Enter Present DG HMR"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textAlignment="viewStart" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_button_previousReading"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:layout_marginTop="@dimen/app_normal_margin"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:text="Prev Reading"
+                        android:textColor="@color/whitesmoke"
+                        android:textSize="18sp"
+                        android:visibility="invisible" />
+                    <!--android:textAllCaps="false"-->
+                    <Button
+                        android:id="@+id/preventiveMaintenanceSiteEarthingCheckPoints_button_nextReading"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/app_min_margin"
+                        android:layout_marginTop="@dimen/app_normal_margin"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:text="Next Reading"
+                        android:textColor="@color/whitesmoke"
+                        android:textSize="18sp" />
+                    <!--android:textAllCaps="false"-->
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

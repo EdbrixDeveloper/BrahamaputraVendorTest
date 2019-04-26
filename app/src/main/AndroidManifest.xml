@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.brahamaputra.mahindra.brahamaputravendor">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/applogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".Activities.UsersHotoListActivity"
+            android:label="HOTO List"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UserHotoTransactionActivity"
+            android:label="HOTO Transaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Tower_Detail"
+            android:label="Tower Detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.HotoSectionsListActivity"
+            android:label="Readings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Land_Details"
+            android:label="Land Detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Earth_Resistance_Equipment"
+            android:label="Earth Resistance (Equipment)"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Earth_Resistance_Tower"
+            android:label="Earth Resistance (Tower)"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Electric_Connection"
+            android:label="Electric Connection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Solar_Power_System"
+            android:label="Solar Power System"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.UserProfileActivity" />
+        <activity
+            android:name=".Activities.Media"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Battery_Set"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ExternalTenantsPersonaldetails"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Total_DC_Load_site"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ActiveequipmentDetails"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PowerManagementSystem"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.GeneralAndSafetyMeasures"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ACDB_DCDB"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ServoStabilizer"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DetailsOfUnusedMaterials"
+            android:label="Battery Set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Air_Conditioners"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PowerPlantDetailsActivity"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Power_Backups_DG"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Shelter"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Activities.ForgotPasswordActivity"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PhotoCaptureActivity"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".Activities.DieselFillingFundRequest"
+            android:label="Diesel Filling Fund Request"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DieselFilling"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DieselFillingList"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MyEnergyListActivity"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DashboardCircularActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".Activities.ElectricBillProcessList"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ElectricBillMenuActivity"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ElectricBillProcess"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UploadEBPaymentDetailsActivity"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UserEditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UserChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UploadEBReceiptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PowerPlantDetailsModulesReadingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UsersOfflineHotoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.NotificationList"
+            android:label="Sections"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d4631a7ecef417fb3eec16291cdf2f285f48493c" />
+
+        <!-- [START firebase_service] -->
+        <service android:name=".Services.GoogleFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <service
+            android:name=".Services.GoogleJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/applogo" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorBlack" />
+
+        <activity
+            android:name=".Activities.MyPreventiveListActivity"
+            android:label="My Preventive List"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SitePreventiveMaintenanceSectionsListActivity"
+            android:label="Site Preventive Maintenance Sections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AcPreventiveMaintenanceSectionsListActivity"
+            android:label="AC Preventive Maintenance Sections List"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintanceAcFieldEngineerActivity"
+            android:label="Preventive Maintenance AC FSE"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceAcTechnicianActivity"
+            android:label="Preventive Maintenance AC Technician"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteAcCheckPointsActivity"
+            android:label="Preventive Maintenance Site AC Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PriventiveMaintenanceSiteTransactionActivity"
+            android:label="Priventive Maintenance Site Transaction"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteHygieneGeneralSaftyActivity"
+            android:label="Preventive Maintenance Site Hygiene General Safty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteAlarmCheckPointsActivity"
+            android:label="Preventive Maintenance Site Alarm Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteEbMeterBoxActivity"
+            android:label="Preventive Maintenance Site EB Meter Box"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteDgCheckPointsActivity"
+            android:label="Preventive Maintenance Site DG Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteSmpsCheckPointsActivity"
+            android:label="Preventive Maintenance Site SMPS Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSitePmsAmfPanelCheckPointsActivity"
+            android:label="Preventive Maintenance Site PMS AMF Panel Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteDgBatteryCheckPointsActivity"
+            android:label="Preventive Maintenance Site Dg Battery Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteOtherElectricalCheckPointsActivity"
+            android:label="Preventive Maintenance Site Other Electrical Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteServoCheckPointsActivity"
+            android:label="Preventive Maintenance Site Servo Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteShelterCheckPointsActivity"
+            android:label="Preventive Maintenance Site Shelter Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteRectifierModuleCheckPointActivity"
+            android:label="Preventive Maintenance Site Rectifier Module Check Point"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteBatteryBankCheckPointsActivity"
+            android:label="Preventive Maintenance Site Battery Bank Check Points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteBatteryBankBackUpTestReportActivity"
+            android:label="Preventive Maintenance Site Battery Bank BackUpTestReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PreventiveMaintenanceSiteEarthingCheckPointsActivity"
+            android:label="Preventive Maintenance Site Earthing Check Points"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.PreventiveMaintenanceDashboard" />
+        <activity android:name=".Activities.AcPreventiveMaintenanceDashboardActivity" />
+        <activity android:name=".Activities.DieselFillingFundReqestList" />
+        <activity android:name=".Activities.CustomTitleActivity" />
+        <activity android:name=".Activities.ShowHotoNotifiacationDetailsActivity" />
+        <activity android:name=".Activities.MaintenanceDashboardActivity" />
+        <activity android:name=".Activities.EnergyDashboardActivity" />
+        <activity android:name=".Activities.ElectricBillPaymentActivity" />
+        <activity android:name=".Activities.SafteyTipsActivity" />
+        <activity android:name=".Activities.ListGroupActivity" />
+        <activity android:name=".Activities.ItemListActivity"></activity>
+
+        <activity android:name=".Activities.EbSiteElectrificationList"></activity>
+        <activity android:name=".Activities.EbSiteElectrificationTransactionActivity" />
+        <activity android:name=".Activities.EbSiteElectrificationElectricConnectionActivity"></activity>
+    </application>
+
+</manifest>

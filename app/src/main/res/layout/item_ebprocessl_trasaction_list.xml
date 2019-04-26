@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/app_min_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/textView_ticketNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/app_min_margin"
+                android:layout_marginLeft="@dimen/app_normal_margin"
+                android:layout_weight="1"
+                android:text="TKT_1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_DateOfRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_normal_margin"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Date: dd/mmm/yyyy" />
+        </LinearLayout>
+
+        <!---->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_SiteName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_weight="1"
+                    android:text="Site Name: " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="right"
+                android:layout_marginLeft="@dimen/app_normal_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.5"
+                    android:text=""
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:text=""
+                    android:textStyle="bold" /><!--android:layout_marginLeft="@dimen/app_normal_margin"-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_BillIssueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_weight="1"
+                    android:text="Bill Issue Date: " />
+
+                <TextView
+                    android:id="@+id/textView_BillDueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_weight="1"
+
+                    android:text="Bill Due Date: " />
+
+                <TextView
+                    android:id="@+id/textView_BillGrossAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_weight="1"
+
+                    android:text="Gross Amt: " />
+
+                <TextView
+                    android:id="@+id/textView_ModeOfPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_normal_margin"
+                    android:layout_weight="1"
+
+                    android:text="Mode Of Payment: 00" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView_details"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:src="@drawable/ic_details_black_18dp"
+                    android:visibility="visible"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView_status"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/app_normal_margin"
+                    android:src="@drawable/ic_file_upload_black_24dp"
+                    android:visibility="visible"></ImageView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!---->
+    </LinearLayout>
+
+</LinearLayout>
