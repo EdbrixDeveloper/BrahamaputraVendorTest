@@ -11,9 +11,14 @@ public class AcPmTransactionDetails implements Serializable {
     @SerializedName("AccessToken")
     @Expose
     private String accessToken;
+
     @SerializedName("UserId")
     @Expose
     private String userId;
+
+    @SerializedName("VendorId")
+    @Expose
+    private String vendorId;
 
     @SerializedName("acPMTicketId")
     @Expose
@@ -49,6 +54,14 @@ public class AcPmTransactionDetails implements Serializable {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getVendorId() {
+        return vendorId;
+    }
+
+    public void setVendorId(String vendorId) {
+        this.vendorId = vendorId;
     }
 
     public String getTicketId() {

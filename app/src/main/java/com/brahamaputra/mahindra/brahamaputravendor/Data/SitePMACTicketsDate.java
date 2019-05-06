@@ -10,10 +10,10 @@ public class SitePMACTicketsDate {
     @SerializedName("TicketDate")
     @Expose
     private String ticketDate;
-    @SerializedName("SitePMAcTicketCount")
+    @SerializedName("SitePMAcVendorTicketCount")
     @Expose
     private Integer sitePMAcTicketCount;
-    @SerializedName("SitePMAcTickets")
+    @SerializedName("SitePMAcVendorTickets")
     @Expose
     private List<AcSitePMTicket> sitePMAcTickets = null;
 

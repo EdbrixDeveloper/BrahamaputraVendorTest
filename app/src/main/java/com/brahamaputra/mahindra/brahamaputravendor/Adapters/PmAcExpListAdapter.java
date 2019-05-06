@@ -56,18 +56,23 @@ public class PmAcExpListAdapter extends BaseExpandableListAdapter {
         TextView textView_SiteName = (TextView) convertView.findViewById(R.id.textView_SiteName);
         TextView textView_SiteAddress = (TextView) convertView.findViewById(R.id.textView_SiteAddress);
         TextView textView_SiteSSA = (TextView) convertView.findViewById(R.id.textView_SiteSSA);
+        TextView textView_FseName = (TextView) convertView.findViewById(R.id.textView_FseName);
+        TextView textView_FseMobNo = (TextView) convertView.findViewById(R.id.textView_FseMobNo);
 
         textView_pmSiteName.setText(AcSitePMTicket.getSitePMAcTicketNo());
         textView_SiteID.setText("Site ID: " + AcSitePMTicket.getSiteId());
         textView_SiteName.setText("Site Name: " + AcSitePMTicket.getSiteName());
         textView_SiteAddress.setText("Site Address: " + AcSitePMTicket.getSiteAddress());
         textView_SiteSSA.setText("Site SSA: " + AcSitePMTicket.getSSAName());
+        textView_FseName.setText("FSE Name: " + AcSitePMTicket.getSiteEngineerName());
+        textView_FseMobNo.setText("FSE Mobile NO.: " + AcSitePMTicket.getSiteEngineerMobileNo());
 
-        if (AcSitePMTicket.getStatus().equalsIgnoreCase("WIP")) {
+
+        /*if (AcSitePMTicket.getStatus().equalsIgnoreCase("WIP")) {
             convertView.setBackgroundColor(ContextCompat.getColor(_context, R.color.yellow));
         } else {
             convertView.setBackgroundColor(ContextCompat.getColor(_context, R.color.colorWhite));
-        }
+        }*/
         return convertView;
     }
 

@@ -111,17 +111,17 @@ public class AcPreventiveMaintenanceSectionsListActivity extends BaseActivity {
         designation = sessionManager.getSessionDesignation();
         gpsTracker = new GPSTracker(AcPreventiveMaintenanceSectionsListActivity.this);
 
-        int flag = 0;
-        /*if (accessType.equals("S") && ticketAccess.equals("1") && (acPmTickStatus.equals("Open") || acPmTickStatus.equals("Reassigned"))) {
+        /*int flag = 0;
+        if (accessType.equals("S") && ticketAccess.equals("1") && (acPmTickStatus.equals("Open") || acPmTickStatus.equals("Reassigned"))) {
             flag = 1;
             values = new String[]{"Ticket Submission from Field Engineer"};
-        } else*/ if (accessType.equals("A") && ticketAccess.equals("1") && acPmTickStatus.equals("WIP")) {
-            flag = 1;
+        } else if (accessType.equals("A") && ticketAccess.equals("1") && acPmTickStatus.equals("WIP")) {
+            flag = 1;*/
             values = new String[]{"AC PM Process"};
-        } /*else if (accessType.equals("S") && ticketAccess.equals("1") && acPmTickStatus.equals("WIP")) {
+        /*} else if (accessType.equals("S") && ticketAccess.equals("1") && acPmTickStatus.equals("WIP")) {
             flag = 1;
             values = new String[]{"AC PM Process", "Ticket Submission from Field Engineer"};
-        }*/ else {
+        } else {
             flag = 0;
             showToast("Unauthorised ticket status.");
             //finish();
@@ -133,7 +133,7 @@ public class AcPreventiveMaintenanceSectionsListActivity extends BaseActivity {
         }*/
 
 
-        if (flag == 1) {
+        /*if (flag == 1) {*/
             dataModels = new ArrayList<>();
             for (int i = 0; i < values.length; i++) {
                 dataModels.add(new PreventiveMaintenanceAcSection("" + (i + 1), "" + values[i], 0));
@@ -226,7 +226,7 @@ public class AcPreventiveMaintenanceSectionsListActivity extends BaseActivity {
                     }
                 }
             });
-        }
+        /*}*/
     }
 
     @Override

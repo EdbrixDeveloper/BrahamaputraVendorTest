@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class AcSitePMTicket {
+
     @SerializedName("Id")
     @Expose
     private String id;
@@ -13,76 +14,95 @@ public class AcSitePMTicket {
     @SerializedName("SitePMAcTicketDate")
     @Expose
     private String acPMTicketDate;
-
-    @SerializedName("AcPmPlanDate")
-    @Expose
-    private String pmPlanDate;
-    @SerializedName("SubmittedDate")
-    @Expose
-    private String submittedDate;
-    @SerializedName("SheduledDateOfAcPm")
-    @Expose
-    private String acPMScheduledDate;
-
     @SerializedName("ModeOfOpration")
     @Expose
     private String modeOfOpration;
     @SerializedName("VendorName")
     @Expose
     private String vendorName;
-    @SerializedName("AcTechnicianName")
+
+    @SerializedName("SiteEngineerName")
     @Expose
-    private String acTechnicianName;
-    @SerializedName("AcTechnicianMobileNo")
+    private String siteEngineerName;
+
+    @SerializedName("SiteEngineerMobileNo")
     @Expose
-    private String acTechnicianMobileNo;
-    @SerializedName("SiteDBId")
-    @Expose
-    private String siteDBId;
-    @SerializedName("SiteId")
-    @Expose
-    private String siteId;
+    private String siteEngineerMobileNo;
+
     @SerializedName("SiteName")
     @Expose
     private String SiteName;
 
-    @SerializedName("Status")
+    @SerializedName("SiteAddress")
     @Expose
-    private String status;
-    @SerializedName("NumberOfAc")
-    @Expose
-    private String numberOfAc;
-    /*@SerializedName("AcTechnicianStatus")
-    @Expose
-    private String acTechnicianStatus;*/
-    @SerializedName("StateName")
-    @Expose
-    private String stateName;
-    @SerializedName("CustomerName")
-    @Expose
-    private String customerName;
-    @SerializedName("CircleName")
-    @Expose
-    private String circleName;
-    @SerializedName("SSAName")
-    @Expose
-    private String ssaName;
+    private String SiteAddress;
 
-    @SerializedName("TicketAccess")
+    @SerializedName("SheduledDateOfAcPm")
     @Expose
-    private String ticketAccess;
+    private String acPMScheduledDate;
+
+    @SerializedName("SiteId")
+    @Expose
+    private String siteId;
+
+    @SerializedName("SiteDBId")
+    @Expose
+    private String siteDBId;
 
     @SerializedName("SiteType")
     @Expose
     private String siteType;
 
+    @SerializedName("StateName")
+    @Expose
+    private String stateName;
+
+    @SerializedName("CustomerName")
+    @Expose
+    private String customerName;
+
+    @SerializedName("CircleName")
+    @Expose
+    private String circleName;
+
+    @SerializedName("SSAName")
+    @Expose
+    private String ssaName;
+
+    @SerializedName("NumberOfAc")
+    @Expose
+    private String numberOfAc;
+
+    @SerializedName("AcPmPlanDate")
+    @Expose
+    private String pmPlanDate;
+
+    @SerializedName("SubmittedDate")
+    @Expose
+    private String submittedDate;
+
+
+
+    @SerializedName("AcTechnicianName")
+    @Expose
+    private String acTechnicianName;
+
+    @SerializedName("AcTechnicianMobileNo")
+    @Expose
+    private String acTechnicianMobileNo;
+
+    @SerializedName("Status")
+    @Expose
+    private String status;
+
+    @SerializedName("TicketAccess")
+    @Expose
+    private String ticketAccess;
+
     @SerializedName("AccessType")
     @Expose
     private String accessType;
 
-    @SerializedName("SiteAddress")
-    @Expose
-    private String SiteAddress;
 
 
     public String getId() {
@@ -149,6 +169,22 @@ public class AcSitePMTicket {
         this.vendorName = vendorName;
     }
 
+    public String getSiteEngineerName() {
+        return siteEngineerName;
+    }
+
+    public void setSiteEngineerName(String siteEngineerName) {
+        this.siteEngineerName = siteEngineerName;
+    }
+
+    public String getSiteEngineerMobileNo() {
+        return siteEngineerMobileNo;
+    }
+
+    public void setSiteEngineerMobileNo(String siteEngineerMobileNo) {
+        this.siteEngineerMobileNo = siteEngineerMobileNo;
+    }
+
     public String getAcTechnicianName() {
         return acTechnicianName;
     }
@@ -205,14 +241,6 @@ public class AcSitePMTicket {
     public void setNumberOfAc(String numberOfAc) {
         this.numberOfAc = numberOfAc;
     }
-
-    /*public String getAcTechnicianStatus() {
-        return acTechnicianStatus;
-    }
-
-    public void setAcTechnicianStatus(String acTechnicianStatus) {
-        this.acTechnicianStatus = acTechnicianStatus;
-    }*/
 
     public String getStateName() {
         return stateName;

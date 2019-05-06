@@ -175,22 +175,6 @@ public class LoginActivity extends BaseActivity {
 
                             if (response.getSuccess() == 1) {
 
-                                /*arruser['Id']
-    $arruser['FirstName']
-    $arruser['LastName']
-    $arruser['Username']
-    $arruser['Email']
-    $arruser['PhoneNo']--new in User
-
-    $arruser['VendorId']--new in User
-    $arruser['VendorCode']--new in User
-    $arruser['VendorName']--new in User
-    $arruser['VendorAddress']--new in User
-    $arruser['VendorCity']--new in User
-    $arruser['VendorZipCode']--new in User
-    $arruser['VendorState']--new in User
-    $arruser['VendorPhoneNo']--new in User*/
-
                                 sessionManager.updateSessionUsername(response.getUser().getUsername());//vendor
                                 sessionManager.updateSessionUserID(response.getUser().getId());//vendor
                                 sessionManager.updateSessionUserFirstName(response.getUser().getFirstName());//vendor

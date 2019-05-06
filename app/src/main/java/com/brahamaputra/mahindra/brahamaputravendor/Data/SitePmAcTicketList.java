@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class SitePmAcTicketList {
+
     @SerializedName("Success")
     @Expose
     private Integer success;
@@ -15,12 +16,16 @@ public class SitePmAcTicketList {
     @SerializedName("Message")
     @Expose
     private String message;
-    @SerializedName("SitePMAcTicketsDates")
+
+    @SerializedName("SitePMAcVendorTicketsDates")
     @Expose
     private List<SitePMACTicketsDate> sitePMACTicketsDates = null;
-    @SerializedName("SitePMAcTicketSummary")
+
+
+    @SerializedName("SitePMAcVendorTicketSummary")
     @Expose
     private SitePMTicketSummary sitePMTicketSummary;
+
 
     @SerializedName("Error")
     @Expose

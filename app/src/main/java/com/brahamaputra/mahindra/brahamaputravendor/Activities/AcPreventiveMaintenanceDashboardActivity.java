@@ -165,8 +165,8 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
                             final String sheduledDateOfAcPm = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSheduledDateOfAcPm() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSheduledDateOfAcPm().toString();
                             final String modeOfOpration = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getModeOfOpration() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getModeOfOpration().toString();
                             final String vendorName = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getVendorName() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getVendorName().toString();
-                            final String acTechnicianName = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianName() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianName().toString();
-                            final String acTechnicianMobileNo = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianMobileNo() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianMobileNo().toString();
+                            final String acTechnicianName = "";//acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianName() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianName().toString();
+                            final String acTechnicianMobileNo = "";// acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianMobileNo() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAcTechnicianMobileNo().toString();
                             final String siteDBId = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteDBId() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteDBId().toString();
                             final String siteId = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteId() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteId().toString();
                             final String siteName = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteName() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteName().toString();
@@ -178,14 +178,13 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
                             final String ssaName = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSSAName() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSSAName().toString();
 
                             final String siteType = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteType() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getSiteType().toString();
-                            final String accessType = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAccessType() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAccessType().toString();
-                            final String ticketAccess = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getTicketAccess() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getTicketAccess().toString();
 
-                            final String acPmTickStatus = acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getStatus() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getStatus().toString();
+                            final String accessType = ""; //acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAccessType() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getAccessType().toString();
+                            final String ticketAccess = "";// acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getTicketAccess() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getTicketAccess().toString();
+                            final String acPmTickStatus = "";// acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getStatus() == null ? "" : acPmTicketList.getSitePMTicketsDates().get(groupPosition).getSitePMAcTickets().get(childPosition).getStatus().toString();
 
 
-                            if (getDaysRemainingForSheduledDate(currentDateTimeString, sheduledDateOfAcPm)) {
-                                // comment for not added checkSystemLocation || acPmTickStatus.equals("Processed")
+                            /*if (getDaysRemainingForSheduledDate(currentDateTimeString, sheduledDateOfAcPm)) {
                                 if (acPmTickStatus.equals("Open") || acPmTickStatus.equals("WIP") || acPmTickStatus.equals("Reassigned")) {
                                     if (acPmTickStatus.equals("Open")) {
 
@@ -200,12 +199,12 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
                                             flag = 0;
                                             showToast("Access denied in ticket status " + acPmTickStatus + " mode");
                                         }
-                                        if (flag == 1) {
-                                            checkSystemLocation(customerName, circleName, stateName, ssaName, siteDBId, siteId, siteName, siteType,
-                                                    sitePMAcTicketId, sitePMAcTicketNo, sitePMAcTicketDate, pmPlanDate,
-                                                    submittedDate, sheduledDateOfAcPm, numberOfAc, modeOfOpration,
-                                                    vendorName, acTechnicianName, acTechnicianMobileNo, accessType, ticketAccess, acPmTickStatus);
-                                        }
+                                        if (flag == 1) {*/
+                            checkSystemLocation(customerName, circleName, stateName, ssaName, siteDBId, siteId, siteName, siteType,
+                                    sitePMAcTicketId, sitePMAcTicketNo, sitePMAcTicketDate, pmPlanDate,
+                                    submittedDate, sheduledDateOfAcPm, numberOfAc, modeOfOpration,
+                                    vendorName, acTechnicianName, acTechnicianMobileNo, accessType, ticketAccess, acPmTickStatus);
+                                        /*}
 
                                     } else {
                                         int flag = 0;
@@ -220,15 +219,15 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
                                             showToast("Access denied in ticket status " + acPmTickStatus + " mode");
                                         }
                                         if (flag == 1) {
-                                            checkSystemLocation(customerName, circleName, stateName, ssaName, siteDBId, siteId, siteName, siteType,
-                                                    sitePMAcTicketId, sitePMAcTicketNo, sitePMAcTicketDate, pmPlanDate,
-                                                    submittedDate, sheduledDateOfAcPm, numberOfAc, modeOfOpration,
-                                                    vendorName, acTechnicianName, acTechnicianMobileNo, accessType, ticketAccess, acPmTickStatus);
+                                        checkSystemLocation(customerName, circleName, stateName, ssaName, siteDBId, siteId, siteName, siteType,
+                                                sitePMAcTicketId, sitePMAcTicketNo, sitePMAcTicketDate, pmPlanDate,
+                                                submittedDate, sheduledDateOfAcPm, numberOfAc, modeOfOpration,
+                                                vendorName, acTechnicianName, acTechnicianMobileNo, accessType, ticketAccess, acPmTickStatus);
                                         }
                                     }
 
                                 }
-                            }
+                            }*/
 
                         }
 
@@ -313,20 +312,13 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
             showBusyProgress();
             JSONObject jo = new JSONObject();
 
-            /*{
-                "UserId":"120",
-                    "AccessToken":"MjUyLTg1REEyUzMtQURTUzVELUVJNUI0QTIyMTEyMA=="}*/
-
-            /*{
-                "UserId":"145",
-                    "AccessToken":"MjUyLTg1REEyUzMtQURTUzVELUVJNUI0QTIyMTE0NQ=="
-            }*/
             jo.put("UserId", sessionManager.getSessionUserId());
             jo.put("AccessToken", sessionManager.getSessionDeviceToken());
+            jo.put("VendorId", sessionManager.getSessionVendorId());
 
-            Log.i(PreventiveMaintenanceDashboard.class.getName(), Constants.hototTicketList + "\n\n" + jo.toString());
+            Log.i(PreventiveMaintenanceDashboard.class.getName(), Constants.acPmVendorUserTicketList + "\n\n" + jo.toString());
 
-            GsonRequest<SitePmAcTicketList> getAssignAvailabilityLearnersListRequest = new GsonRequest<>(Request.Method.POST, Constants.acPmTicketList, jo.toString(), SitePmAcTicketList.class,
+            GsonRequest<SitePmAcTicketList> getAssignAvailabilityLearnersListRequest = new GsonRequest<>(Request.Method.POST, Constants.acPmVendorUserTicketList, jo.toString(), SitePmAcTicketList.class,
                     new Response.Listener<SitePmAcTicketList>() {
                         @Override
                         public void onResponse(@NonNull SitePmAcTicketList response) {
@@ -443,16 +435,15 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
                 intent.putExtra("siteId", siteId);
                 intent.putExtra("siteName", siteName);
                 intent.putExtra("siteType", siteType);
-                //intent.putExtra("siteAddress", siteAddress);
 
                 intent.putExtra("numberOfAc", numberOfAc);
                 intent.putExtra("modeOfOpration", modeOfOpration);
                 intent.putExtra("vendorName", vendorName);
                 intent.putExtra("acTechnicianName", acTechnicianName);
                 intent.putExtra("acTechnicianMobileNo", acTechnicianMobileNo);
-                intent.putExtra("accessType", accessType);
+                /*intent.putExtra("accessType", accessType);
                 intent.putExtra("ticketAccess", ticketAccess);
-                intent.putExtra("acPmTickStatus", acPmTickStatus);
+                intent.putExtra("acPmTickStatus", acPmTickStatus);*/
 
                 intent.putExtra("latitude", String.valueOf(gpsTracker.getLatitude()));
                 intent.putExtra("longitude", String.valueOf(gpsTracker.getLongitude()));
@@ -465,17 +456,6 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
             } else {
                 //No Internet Connection
                 showToast("Device has no internet connection.");
-                /*alertDialogManager.Dialog("Conformation", "Device has no internet connection. Do you want to use offline mode?", "ok", "cancel", new AlertDialogManager.onSingleButtonClickListner() {
-                    @Override
-                    public void onPositiveClick() {
-                        Intent intent = new Intent(AcPreventiveMaintenanceDashboardActivity.this, AcPreventiveMaintenanceSectionsListActivity.class);
-                        intent.putExtra("isNetworkConnected", Conditions.isNetworkConnected(AcPreventiveMaintenanceDashboardActivity.this));
-                        intent.putExtra("TicketNO", acPmTicketNo);
-                        sessionManager.updateSessionUserTicketId(acPmTicketId);
-                        sessionManager.updateSessionUserTicketName(acPmTicketNo);
-                        startActivityForResult(intent, RESULT_AC_PM_SUBMIT);
-                    }
-                }).show();*/
             }
         }
     }
@@ -501,18 +481,6 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
