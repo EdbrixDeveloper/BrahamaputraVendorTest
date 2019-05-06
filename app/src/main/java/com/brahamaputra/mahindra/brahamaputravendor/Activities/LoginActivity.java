@@ -146,12 +146,13 @@ public class LoginActivity extends BaseActivity {
         }
     }
 
-    private void doLogin(String email, String password) {
+    private void doLogin(String vendorCode, String email, String password) {
         showBusyProgress();
         JSONObject jo = new JSONObject();
         try {
             jo.put("APIKEY", Constants.APP_KEY__);
             jo.put("SECRETKEY", Constants.APP_SECRET__);
+            jo.put("Vendorcode", vendorCode);
             jo.put("Username", email);
             jo.put("Password", password);
             jo.put("DeviceId", Constants.androidDeviceid);
@@ -173,11 +174,40 @@ public class LoginActivity extends BaseActivity {
                         } else {
 
                             if (response.getSuccess() == 1) {
-                                sessionManager.updateSessionUsername(response.getUser().getUsername());
-                                sessionManager.updateSessionUserID(response.getUser().getId());
-                                sessionManager.updateSessionUserFirstName(response.getUser().getFirstName());
-                                sessionManager.updateSessionUserLastName(response.getUser().getLastName());
-                                sessionManager.updateSessionUserEmail(response.getUser().getEmail());
+
+                                /*arruser['Id']
+    $arruser['FirstName']
+    $arruser['LastName']
+    $arruser['Username']
+    $arruser['Email']
+    $arruser['PhoneNo']--new in User
+
+    $arruser['VendorId']--new in User
+    $arruser['VendorCode']--new in User
+    $arruser['VendorName']--new in User
+    $arruser['VendorAddress']--new in User
+    $arruser['VendorCity']--new in User
+    $arruser['VendorZipCode']--new in User
+    $arruser['VendorState']--new in User
+    $arruser['VendorPhoneNo']--new in User*/
+
+                                sessionManager.updateSessionUsername(response.getUser().getUsername());//vendor
+                                sessionManager.updateSessionUserID(response.getUser().getId());//vendor
+                                sessionManager.updateSessionUserFirstName(response.getUser().getFirstName());//vendor
+                                sessionManager.updateSessionUserLastName(response.getUser().getLastName());//vendor
+                                sessionManager.updateSessionUserEmail(response.getUser().getEmail());//vendor
+                                sessionManager.updateSessionUserPhoneNo(response.getUser().getPhoneNo());//vendor
+
+                                sessionManager.updateSessionVendorId(response.getUser().getVendorId());//vendor
+                                sessionManager.updateSessionVendorCode(response.getUser().getVendorCode());//vendor
+                                sessionManager.updateSessionVendorName(response.getUser().getVendorName());//vendor
+                                sessionManager.updateSessionVendorAddress(response.getUser().getVendorAddress());//vendor
+                                sessionManager.updateSessionVendorCity(response.getUser().getVendorCity());//vendor
+                                sessionManager.updateSessionVendorZipCode(response.getUser().getVendorZipCode());//vendor
+                                sessionManager.updateSessionVendorState(response.getUser().getVendorState());//vendor
+                                sessionManager.updateSessionVendorPhoneNo(response.getUser().getVendorPhoneNo());//vendor
+
+
                                 sessionManager.updateSessionMobileNo(response.getUser().getMobileNo());
                                 sessionManager.updateSessionDesignation(response.getUser().getDesignation());
                                 sessionManager.updateSessionCircle(response.getUser().getCircle());
@@ -275,7 +305,7 @@ public class LoginActivity extends BaseActivity {
             mLoginEditTextPassword.setError(null);
 
             if (Conditions.isNetworkConnected(LoginActivity.this)) {
-                doLogin(username, password);
+                doLogin(vendorCode, username, password);
             } else {
                 Toast.makeText(LoginActivity.this, "Network Eror", Toast.LENGTH_SHORT).show();
             }

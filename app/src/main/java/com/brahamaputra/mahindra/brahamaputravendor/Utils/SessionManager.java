@@ -50,6 +50,17 @@ public class SessionManager {
 
     private static final String PREFS_SESSION_User_Customer = "Customer";
 
+    private static final String PREFS_SESSION_User_PhoneNo = "Vendor";
+    private static final String PREFS_SESSION_VendorId = "Vendor";
+    private static final String PREFS_SESSION_VendorCode = "Vendor";
+    private static final String PREFS_SESSION_VendorName = "Vendor";
+    private static final String PREFS_SESSION_VendorAddress = "Vendor";
+    private static final String PREFS_SESSION_VendorCity = "Vendor";
+    private static final String PREFS_SESSION_VendorZipCode = "Vendor";
+    private static final String PREFS_SESSION_VendorState = "Vendor";
+    private static final String PREFS_SESSION_VendorPhoneNo = "Vendor";
+
+
     private SharedPreferences sharedPrefs;
 
     public SessionManager(Context context) {
@@ -65,9 +76,7 @@ public class SessionManager {
      *
      * @return
      */
-  /*  public Boolean hasSessionCredentials() {
-        return ((this.getSessionOrgId().length() > 0) && (this.getSessionProfileToken().length() > 0) && (this.getLoggedUserData() != null) && (this.getLoggedUserData().getId().length() > 0));
-    }*/
+
 
     /**
      * Gets the session's saved username.
@@ -207,29 +216,155 @@ public class SessionManager {
         return this.sharedPrefs.getString(PREFS_SESSION_User_Customer, "");
     }
 
-    /*  public ArrayList<UserData> getLoggedUsersList() {
-        try {
-            return (ArrayList<UserData>) ObjectSerializer.deserialize(this.sharedPrefs.getString(PREFS_SESSION_LOGGEDUSERSLIST, ObjectSerializer.serialize(new ArrayList<UserData>())));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        }
+    public String getSessionUserPhoneNo() {
+        return this.sharedPrefs.getString(PREFS_SESSION_User_PhoneNo, "");
     }
 
-    public HashMap<String, String> getLoggedUsersCredentialsHashMap() {
-        try {
-            return (HashMap<String, String>) ObjectSerializer.deserialize(this.sharedPrefs.getString(PREFS_SESSION_LOGGEDUSERSCREDENTIALSLIST, ObjectSerializer.serialize(new HashMap<String, String>())));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return null;
+    public void updateSessionUserPhoneNo(String UserPhoneNo) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((UserPhoneNo != null) && (UserPhoneNo.length() > 0)) {
+            editor.putString(PREFS_SESSION_User_PhoneNo, UserPhoneNo);
+        } else {
+            editor.remove(PREFS_SESSION_User_PhoneNo);
         }
-    }*/
+        editor.commit();
+    }
+
+    public String getSessionVendorId() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorId, "");
+    }
+
+    public void updateSessionVendorId(String VendorId) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorId != null) && (VendorId.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorId, VendorId);
+        } else {
+            editor.remove(PREFS_SESSION_VendorId);
+        }
+        editor.commit();
+    }
+
+    public String getSessionVendorCode() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorCode, "");
+    }
+
+    public void updateSessionVendorCode(String VendorCode) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorCode != null) && (VendorCode.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorCode, VendorCode);
+        } else {
+            editor.remove(PREFS_SESSION_VendorCode);
+        }
+        editor.commit();
+    }
+
+    public String getSessionVendorName() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorName, "");
+    }
+
+    public void updateSessionVendorName(String VendorName) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorName != null) && (VendorName.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorName, VendorName);
+        } else {
+            editor.remove(PREFS_SESSION_VendorName);
+        }
+        editor.commit();
+    }
+
+    public String getSessionVendorAddress() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorAddress, "");
+    }
+
+    public void updateSessionVendorAddress(String VendorAddress) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorAddress != null) && (VendorAddress.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorAddress, VendorAddress);
+        } else {
+            editor.remove(PREFS_SESSION_VendorAddress);
+        }
+        editor.commit();
+    }
+
+    public String getSessionVendorCity() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorCity, "");
+    }
+
+    public void updateSessionVendorCity(String VendorCity) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorCity != null) && (VendorCity.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorCity, VendorCity);
+        } else {
+            editor.remove(PREFS_SESSION_VendorCity);
+        }
+        editor.commit();
+    }
+
+
+    public String getSessionVendorZipCode() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorZipCode, "");
+    }
+
+    public void updateSessionVendorZipCode(String VendorZipCode) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorZipCode != null) && (VendorZipCode.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorZipCode, VendorZipCode);
+        } else {
+            editor.remove(PREFS_SESSION_VendorZipCode);
+        }
+        editor.commit();
+    }
+
+    public String getSessionVendorState() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorState, "");
+    }
+
+    public void updateSessionVendorState(String VendorState) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorState != null) && (VendorState.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorState, VendorState);
+        } else {
+            editor.remove(PREFS_SESSION_VendorState);
+        }
+        editor.commit();
+    }
+
+    public String getSessionVendorPhoneNo() {
+        return this.sharedPrefs.getString(PREFS_SESSION_VendorPhoneNo, "");
+    }
+
+    public void updateSessionVendorPhoneNo(String VendorPhoneNo) {
+
+        Editor editor = this.sharedPrefs.edit();
+        if ((VendorPhoneNo != null) && (VendorPhoneNo.length() > 0)) {
+            editor.putString(PREFS_SESSION_VendorPhoneNo, VendorPhoneNo);
+        } else {
+            editor.remove(PREFS_SESSION_VendorPhoneNo);
+        }
+        editor.commit();
+    }
+
+    /*sessionManager.updateSessionUserPhoneNo(response.getUser().getPhoneNo());//vendor
+
+                                sessionManager.updateSessionVendorId(response.getUser().getVendorId());//vendor
+                                sessionManager.updateSessionVendorCode(response.getUser().getVendorCode());//vendor
+                                sessionManager.updateSessionVendorName(response.getUser().getVendorName());//vendor
+                                sessionManager.updateSessionVendorAddress(response.getUser().getVendorAddress());//vendor
+                                sessionManager.updateSessionVendorCity(response.getUser().getVendorCity());//vendor
+                                sessionManager.updateSessionVendorZipCode(response.getUser().getVendorZipCode());//vendor
+                                sessionManager.updateSessionVendorState(response.getUser().getVendorState());//vendor
+                                sessionManager.updateSessionVendorPhoneNo(response.getUser().getVendorPhoneNo());//vendor*/
+
+
+
 
     /**
      * Updates the saved session credentials.
@@ -295,7 +430,7 @@ public class SessionManager {
         editor.commit();
     }
 
-        /**
+    /**
      * Updates the saved session credentials.
      *
      * @param deviceFCMToken the DeviceFCMToken to save.

@@ -78,7 +78,14 @@ public class Constants {
     //private final static String BASE_URL = "http://brahmaputra-dev-api.us-west-2.elasticbeanstalk.com/";
     private final static String BASE_URL = "http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/";
 
-    public final static String userLogin = BASE_URL.concat("auth/login");  // authenticatestudent
+    //http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/auth/vendor/login
+    public final static String userLogin = BASE_URL.concat("auth/vendor/login");  // authenticatestudent
+
+
+
+    ////--No All Useful
+    /// if Any need then cut and paste in above section--*/
+
     public final static String hototTicketList = BASE_URL.concat("hototickets/gethototticketlist");  // gethototticketlist
     public final static String submitHototTicket = BASE_URL.concat("hototickets/submithotottickettransactions");  // submitHototticket http://brahmaputra-dev-api.us-west-2.elasticbeanstalk.com/hototickets/submithotottickettransactions
     public final static String hototticketstatusclockin = BASE_URL.concat("hototickets/hototticketstatusclockin");  // hototticketstatusclockin
