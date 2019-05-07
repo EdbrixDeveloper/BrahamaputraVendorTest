@@ -85,7 +85,7 @@ public class ForgotPasswordActivity extends BaseActivity {
                 jo.put("APIKEY", Constants.APP_KEY__);
                 jo.put("SECRETKEY", Constants.APP_SECRET__);
                 jo.put("Username", userName);
-                //jo.put("Vendorcode", vendorCode);
+                jo.put("Vendorcode", vendorCode);
                 //jo.put("Email", email);
 
             } catch (JSONException e) {

@@ -199,7 +199,7 @@
                     android:gravity="left"
                     android:paddingLeft="@dimen/app_normal_padding">
 
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/userProfile_imageView_designation"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
@@ -225,74 +225,101 @@
                         android:layout_toRightOf="@+id/userProfile_imageView_designation"
                         android:paddingLeft="@dimen/app_normal_padding"
                         android:text="Tech"
-                        android:textColor="#2196F3" />
-
+                        android:textColor="#2196F3" />-->
 
                     <ImageView
-                        android:id="@+id/userProfile_imageView_circle"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_below="@+id/userProfile_textView_designationText"
+                        android:id="@+id/userProfile_imageView_vendorCode"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="@dimen/app_min_margin"
                         android:clickable="true"
                         android:scaleType="fitStart"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/ic_user" />
 
                     <TextView
-                        android:id="@+id/userProfile_textView_circle"
+                        android:id="@+id/userProfile_textView_vendorCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/userProfile_textView_designationText"
-                        android:layout_toRightOf="@+id/userProfile_imageView_circle"
+                        android:layout_toRightOf="@+id/userProfile_imageView_vendorCode"
                         android:paddingLeft="@dimen/app_normal_padding"
-                        android:text="Circle" />
+                        android:text="Vendor Code" />
 
                     <TextView
-                        android:id="@+id/userProfile_textView_circleText"
+                        android:id="@+id/userProfile_textView_vendorCodeText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/userProfile_textView_circle"
+                        android:layout_below="@+id/userProfile_textView_vendorCode"
                         android:layout_marginBottom="@dimen/app_big_margin"
-                        android:layout_toRightOf="@+id/userProfile_imageView_circle"
+                        android:layout_toRightOf="@+id/userProfile_imageView_vendorCode"
+                        android:paddingLeft="@dimen/app_normal_padding"
+                        android:text="#000#0"
+                        android:textColor="#2196F3" />
+
+                    <ImageView
+                        android:id="@+id/userProfile_imageView_vendorName"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/userProfile_textView_vendorCodeText"
+                        android:clickable="true"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/ic_user" />
+
+                    <TextView
+                        android:id="@+id/userProfile_textView_vendorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userProfile_textView_vendorCodeText"
+                        android:layout_toRightOf="@+id/userProfile_imageView_vendorName"
+                        android:paddingLeft="@dimen/app_normal_padding"
+                        android:text="Vendor Name" />
+
+                    <TextView
+                        android:id="@+id/userProfile_textView_vendorNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userProfile_textView_vendorName"
+                        android:layout_marginBottom="@dimen/app_big_margin"
+                        android:layout_toRightOf="@+id/userProfile_imageView_vendorName"
                         android:paddingLeft="@dimen/app_normal_padding"
                         android:text="abcde"
                         android:textColor="#2196F3" />
 
 
                     <ImageView
-                        android:id="@+id/userProfile_imageView_state"
+                        android:id="@+id/userProfile_imageView_vendormobileNo"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_below="@+id/userProfile_textView_circleText"
+                        android:layout_below="@+id/userProfile_textView_vendorNameText"
                         android:clickable="true"
                         android:scaleType="fitStart"
-                        android:src="@drawable/ic_circle" />
+                        android:src="@drawable/ic_mobile" />
 
                     <TextView
-                        android:id="@+id/userProfile_textView_state"
+                        android:id="@+id/userProfile_textView_vendormobileNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/userProfile_textView_circleText"
-                        android:layout_toRightOf="@+id/userProfile_imageView_state"
+                        android:layout_below="@+id/userProfile_textView_vendorNameText"
+                        android:layout_toRightOf="@+id/userProfile_imageView_vendormobileNo"
                         android:paddingLeft="@dimen/app_normal_padding"
-                        android:text="State" />
+                        android:text="Vendor Mobile No" />
 
                     <TextView
-                        android:id="@+id/userProfile_textView_stateText"
+                        android:id="@+id/userProfile_textView_vendormobileNoText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/userProfile_textView_state"
+                        android:layout_below="@+id/userProfile_textView_vendormobileNo"
                         android:layout_marginBottom="@dimen/app_big_margin"
-                        android:layout_toRightOf="@+id/userProfile_imageView_state"
+                        android:layout_toRightOf="@+id/userProfile_imageView_vendormobileNo"
                         android:paddingLeft="@dimen/app_normal_padding"
-                        android:text="state name"
+                        android:text="000000000"
                         android:textColor="#2196F3" />
 
 
-                    <ImageView
+                    <!--<ImageView
                         android:id="@+id/userProfile_imageView_ssa"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_below="@+id/userProfile_textView_stateText"
+                        android:layout_below="@+id/userProfile_textView_vendormobileNoText"
                         android:clickable="true"
                         android:scaleType="fitStart"
                         android:src="@drawable/ic_circle" />
@@ -301,7 +328,7 @@
                         android:id="@+id/userProfile_textView_ssa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/userProfile_textView_stateText"
+                        android:layout_below="@+id/userProfile_textView_vendormobileNoText"
                         android:layout_toRightOf="@+id/userProfile_imageView_ssa"
                         android:paddingLeft="@dimen/app_normal_padding"
                         android:text="SSA" />
@@ -315,10 +342,11 @@
                         android:layout_toRightOf="@+id/userProfile_imageView_ssa"
                         android:paddingLeft="@dimen/app_normal_padding"
                         android:text="ssa name"
-                        android:textColor="#2196F3" />
+                        android:textColor="#2196F3" />-->
+
                 </RelativeLayout>
 
-                <RelativeLayout
+                <!--<RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/app_normal_margin"
@@ -353,7 +381,7 @@
                         android:text="Customer"
                         android:textColor="#2196F3" />
 
-                </RelativeLayout>
+                </RelativeLayout>-->
 
             </LinearLayout>
         </ScrollView>

@@ -67,7 +67,7 @@ public class UserChangePasswordActivity extends BaseActivity {
     }
 
     private void checkValidations() {
-        String strPassword =  mLoginEditTextPassword.getText().toString().trim();
+        String strPassword = mLoginEditTextPassword.getText().toString().trim();
         String strConfirmPassword = mLoginEditTextConfirmPassword.getText().toString().trim();
         Conditions.hideKeyboard(UserChangePasswordActivity.this);
 
@@ -79,9 +79,9 @@ public class UserChangePasswordActivity extends BaseActivity {
         } else {
             mLoginEditTextPassword.setError(null);
             if (Conditions.isNetworkConnected(UserChangePasswordActivity.this)) {
-                if(strConfirmPassword.equals(strPassword)){
-                    doChange(strPassword,strConfirmPassword);
-                }else{
+                if (strConfirmPassword.equals(strPassword)) {
+                    doChange(strPassword, strConfirmPassword);
+                } else {
                     showToast("Password did not match");
                 }
 
@@ -94,10 +94,12 @@ public class UserChangePasswordActivity extends BaseActivity {
 
     private void doChange(String strPassword, String strConfirmPassword) {
         showBusyProgress();
-        try{
+        try {
             JSONObject jo = new JSONObject();
             try {
                 jo.put("UserId", sessionManager.getSessionUserId());
+                //jo.put("VendorId", sessionManager.getSessionVendorId());
+                //jo.put("VendorCode", sessionManager.getSessionVendorCode());
                 jo.put("AccessToken", sessionManager.getSessionDeviceToken());
                 jo.put("Password", strPassword);
                 jo.put("ConfirmPassword", strConfirmPassword);
@@ -141,7 +143,7 @@ public class UserChangePasswordActivity extends BaseActivity {
             changePasswordReq.setShouldCache(false);
             Application.getInstance().addToRequestQueue(changePasswordReq, "changePasswordReq");
 
-        }catch(Exception e){
+        } catch (Exception e) {
             hideBusyProgress();
             e.printStackTrace();
         }

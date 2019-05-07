@@ -79,30 +79,32 @@ public class Constants {
     private final static String BASE_URL = "http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/";
 
     //http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/auth/vendor/login
-    public final static String userLogin = BASE_URL.concat("auth/vendor/login");  // authenticatestudent
 
+    /*--  Vendor User Web Service  --*/
+    public final static String userLogin = BASE_URL.concat("auth/vendor/login");  // authenticatestudent
+    public final static String changepassword = BASE_URL.concat("auth/vendor/changepassword");  // changepassword
+    public final static String editprofile = BASE_URL.concat("auth/vendor/editprofile");  // editprofile
+    public final static String forgotpassword = BASE_URL.concat("auth/vendor/forgotpassword");  // forgotpassword
+    public final static String GetUserDetails = BASE_URL.concat("auth/vendor/getuserdetails");//common/getuserdetails");
 
     /*--AC PM Section API --*/
     public final static String acPmVendorUserTicketList = BASE_URL.concat("acpm/vendor/getacpmtransactionticketlist");
     public final static String acPmVendorAcDataOnQrCodeScan = BASE_URL.concat("acpm/vendor/acdetailsonqrcode");
     public final static String processedVendorAcPmTicket = BASE_URL.concat("acpm/vendor/processticketbyactechinican");
-//
-//http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/acpm/vendor/processticketbyactechinican
+
+
+    ////////////////////////
+    ////--No All Useful
+    /// if Any need then cut and paste in above section--*/
 
     public final static String acPmCheckTicketByFieldEngineer = BASE_URL.concat("acpm/acpmcheckin");
     public final static String readAcPmDataByFSE = BASE_URL.concat("acpm/readacpmdatabyfse");
     public final static String submitAcPmTicket = BASE_URL.concat("acpm/submitticketbyfse");
 
 
-    ////--No All Useful
-    /// if Any need then cut and paste in above section--*/
-
     public final static String hototTicketList = BASE_URL.concat("hototickets/gethototticketlist");  // gethototticketlist
     public final static String submitHototTicket = BASE_URL.concat("hototickets/submithotottickettransactions");  // submitHototticket http://brahmaputra-dev-api.us-west-2.elasticbeanstalk.com/hototickets/submithotottickettransactions
     public final static String hototticketstatusclockin = BASE_URL.concat("hototickets/hototticketstatusclockin");  // hototticketstatusclockin
-    public final static String changepassword = BASE_URL.concat("auth/changepassword");  // changepassword
-    public final static String editprofile = BASE_URL.concat("auth/editprofile");  // editprofile
-    public final static String forgotpassword = BASE_URL.concat("auth/forgotpassword");  // forgotpassword
     public final static String updatedevicetoken = BASE_URL.concat("auth/updatedevicetoken"); //updatedevicetoken
 
 
@@ -127,7 +129,7 @@ public class Constants {
     public final static String SubmitElectricityBillTicketList = BASE_URL.concat("electricbill/submitebfillingtransaction");
     public final static String GetElectriBillTransactionslist = BASE_URL.concat("electricbill/getelectribilltransactionslist");
     public final static String SubmitEbfillingPaymentEeceipt = BASE_URL.concat("electricbill/submitebfillingpaymentreceipt");
-    public final static String GetUserDetails = BASE_URL.concat("common/getuserdetails");
+
     public final static String GetEbPaymentDetails = BASE_URL.concat("electricbill/getelectribillchequedddetails");
     public final static String SubmitEbPaymentDetails = BASE_URL.concat("electricbill/submitebfillingddchequereceipt");
 
@@ -137,8 +139,6 @@ public class Constants {
 
     public final static String updatedSitePMCheckIn = BASE_URL.concat("sitepm/sitepmcheckin");//update site PM check in
     public final static String submitSitePMTicket = BASE_URL.concat("sitepm/submitsitepmtickettransactions");
-
-
 
 
 }

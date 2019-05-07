@@ -273,7 +273,6 @@ public class User {
     public String getVendorPhoneNo() {
         return VendorPhoneNo;
     }
-
     public void setVendorPhoneNo(String vendorPhoneNo) {
         VendorPhoneNo = vendorPhoneNo;
     }

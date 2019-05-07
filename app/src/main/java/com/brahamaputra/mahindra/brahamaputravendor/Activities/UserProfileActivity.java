@@ -36,7 +36,9 @@ import com.bumptech.glide.Glide;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UserProfileActivity extends BaseActivity {
@@ -94,6 +96,48 @@ public class UserProfileActivity extends BaseActivity {
     private final String SERVICE_RESULT = "com.service.result";
     private final String SERVICE_MESSAGE = "com.service.message";
 
+    //////////////////////////
+    /*private CircleImageView mImageView2;*/
+    private TextView mTextViewUserProfileName;
+    private TextView mTextViewUserProfileUserName;
+    private TextView mTextViewAppVersion;
+    /*private ImageView mUserProfileImageViewUserName;
+    private TextView mUserProfileTextViewUserName;
+    private TextView mUserProfileTextViewUserNameText;
+    private ImageView mUserProfileImageViewEmail;
+    private TextView mUserProfileTextViewEmail;
+    private TextView mUserProfileTextViewEmailText;
+    private ImageView mUserProfileImageViewMobileNo;
+    private TextView mUserProfileTextViewMobileNo;
+    private TextView mUserProfileTextViewMobileNoText;*/
+
+    private ImageView mUserProfileImageViewVendorCode;
+    private TextView mUserProfileTextViewVendorCode;
+    private TextView mUserProfileTextViewVendorCodeText;
+    private ImageView mUserProfileImageViewVendorName;
+    private TextView mUserProfileTextViewVendorName;
+    private TextView mUserProfileTextViewVendorNameText;
+    private ImageView mUserProfileImageViewVendormobileNo;
+    private TextView mUserProfileTextViewVendormobileNo;
+    private TextView mUserProfileTextViewVendormobileNoText;
+
+   /* private void assignViews() {
+        mImageView2 = (CircleImageView) findViewById(R.id.imageView2);
+        mTextViewUserProfileName = (TextView) findViewById(R.id.textView_userProfile_name);
+        mTextViewUserProfileUserName = (TextView) findViewById(R.id.textView_userProfile_userName);
+        mTextViewAppVersion = (TextView) findViewById(R.id.textView_appVersion);
+        mUserProfileImageViewUserName = (ImageView) findViewById(R.id.userProfile_imageView_userName);
+        mUserProfileTextViewUserName = (TextView) findViewById(R.id.userProfile_textView_userName);
+        mUserProfileTextViewUserNameText = (TextView) findViewById(R.id.userProfile_textView_userNameText);
+        mUserProfileImageViewEmail = (ImageView) findViewById(R.id.userProfile_imageView_email);
+        mUserProfileTextViewEmail = (TextView) findViewById(R.id.userProfile_textView_email);
+        mUserProfileTextViewEmailText = (TextView) findViewById(R.id.userProfile_textView_emailText);
+        mUserProfileImageViewMobileNo = (ImageView) findViewById(R.id.userProfile_imageView_mobileNo);
+        mUserProfileTextViewMobileNo = (TextView) findViewById(R.id.userProfile_textView_mobileNo);
+
+    }*/
+
+    ////////////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,12 +145,6 @@ public class UserProfileActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#c31432")));
-
-        /*#C92143
-        #94203D
-        #c31432*/
-        //getSupportActionBar().setStackedBackgroundDrawable(new ColorDrawable(Color.parseColor("#550000ff")));
-
 
         this.setTitle("Profile");
         assignViews();
@@ -157,12 +195,17 @@ public class UserProfileActivity extends BaseActivity {
             mUserProfileTextViewuserEmail.setText(sessionManager.getSessionUsername().toString());
             mUserProfileTextViewUserNameText.setText(sessionManager.getSessionUsername().toString());
             mUserProfileTextViewEmailText.setText(sessionManager.getSessionUserEmail().toString());
-            mUserProfileTextViewMobileNoText.setText(sessionManager.getSessionMobileNo().toString());
-            mUserProfileTextViewDesignationText.setText(sessionManager.getSessionDesignation().toString());
+            mUserProfileTextViewMobileNoText.setText(sessionManager.getSessionUserPhoneNo().toString());//MobileNo
+
+            mUserProfileTextViewVendorCodeText.setText(sessionManager.getSessionVendorCode().toString());
+            mUserProfileTextViewVendorNameText.setText(sessionManager.getSessionVendorName().toString());
+            mUserProfileTextViewVendormobileNoText.setText(sessionManager.getSessionVendorPhoneNo().toString());
+
+            /*mUserProfileTextViewDesignationText.setText(sessionManager.getSessionDesignation().toString());
             mUserProfileTextViewCircleText.setText(sessionManager.getSessionCircle().toString());
             mUserProfileTextViewStateText.setText(sessionManager.getUser_State().toString());
             mUserProfileTextViewSsaText.setText(sessionManager.getUser_Ssa().toString());
-            mUserProfileTextViewCustomerText.setText(sessionManager.getSessionCustomer().toString());
+            mUserProfileTextViewCustomerText.setText(sessionManager.getSessionCustomer().toString());*/
             //mImageView2.setImageBitmap(getBitmapFromURL(sessionManager.getSessionProfileImageUrl().toString()));
 
             String imageUri = sessionManager.getSessionProfileImageUrl().toString();
@@ -311,15 +354,15 @@ public class UserProfileActivity extends BaseActivity {
         mUserProfileTextViewuserName = (TextView) findViewById(R.id.textView_userProfile_name);
         mUserProfileTextViewuserEmail = (TextView) findViewById(R.id.textView_userProfile_userName);
 
-        mUserProfileImageViewCircle = (ImageView) findViewById(R.id.userProfile_imageView_circle);
+        /*mUserProfileImageViewCircle = (ImageView) findViewById(R.id.userProfile_imageView_circle);
         mUserProfileTextViewCircle = (TextView) findViewById(R.id.userProfile_textView_circle);
         mUserProfileTextViewCircleText = (TextView) findViewById(R.id.userProfile_textView_circleText);
-
+*/
         mUserProfileImageViewUserName = (ImageView) findViewById(R.id.userProfile_imageView_userName);
         mUserProfileTextViewUserName = (TextView) findViewById(R.id.userProfile_textView_userName);
         mUserProfileTextViewUserNameText = (TextView) findViewById(R.id.userProfile_textView_userNameText);
 
-        mUserProfileImageViewDesignation = (ImageView) findViewById(R.id.userProfile_imageView_designation);
+        /*mUserProfileImageViewDesignation = (ImageView) findViewById(R.id.userProfile_imageView_designation);
         mUserProfileTextViewDesignation = (TextView) findViewById(R.id.userProfile_textView_designation);
         mUserProfileTextViewDesignationText = (TextView) findViewById(R.id.userProfile_textView_designationText);
 
@@ -334,9 +377,22 @@ public class UserProfileActivity extends BaseActivity {
         mUserProfileImageViewCustomer = (ImageView) findViewById(R.id.userProfile_imageView_customer);
         mUserProfileTextViewCustomer = (TextView) findViewById(R.id.userProfile_textView_customer);
         mUserProfileTextViewCustomerText = (TextView) findViewById(R.id.userProfile_textView_customerText);
-
+*/
 
         textViewAppVersion = (TextView) findViewById(R.id.textView_appVersion);
+
+        /////////////
+
+        mUserProfileImageViewVendorCode = (ImageView) findViewById(R.id.userProfile_imageView_vendorCode);
+        mUserProfileTextViewVendorCode = (TextView) findViewById(R.id.userProfile_textView_vendorCode);
+        mUserProfileTextViewVendorCodeText = (TextView) findViewById(R.id.userProfile_textView_vendorCodeText);
+        mUserProfileImageViewVendorName = (ImageView) findViewById(R.id.userProfile_imageView_vendorName);
+        mUserProfileTextViewVendorName = (TextView) findViewById(R.id.userProfile_textView_vendorName);
+        mUserProfileTextViewVendorNameText = (TextView) findViewById(R.id.userProfile_textView_vendorNameText);
+        mUserProfileImageViewVendormobileNo = (ImageView) findViewById(R.id.userProfile_imageView_vendormobileNo);
+        mUserProfileTextViewVendormobileNo = (TextView) findViewById(R.id.userProfile_textView_vendormobileNo);
+        mUserProfileTextViewVendormobileNoText = (TextView) findViewById(R.id.userProfile_textView_vendormobileNoText);
+
     }
 
     private void prepareUserPersonalData() {
@@ -346,6 +402,7 @@ public class UserProfileActivity extends BaseActivity {
 
             jo.put("UserId", sessionManager.getSessionUserId());
             jo.put("AccessToken", sessionManager.getSessionDeviceToken());
+            jo.put("VendorId", sessionManager.getSessionVendorId());
 
 
             GsonRequest<UserDetailsParent> userProfileRequestGsonRequest = new GsonRequest<>(Request.Method.POST, Constants.GetUserDetails, jo.toString(), UserDetailsParent.class,
@@ -358,7 +415,7 @@ public class UserProfileActivity extends BaseActivity {
                             } else {
 
                                 if (response.getSuccess() == 1) {
-                                    sessionManager.updateSessionUsername(response.getUserDetails().getUsername());
+                                    /*sessionManager.updateSessionUsername(response.getUserDetails().getUsername());
                                     sessionManager.updateSessionUserID(response.getUserDetails().getId());
                                     sessionManager.updateSessionUserFirstName(response.getUserDetails().getFirstName());
                                     sessionManager.updateSessionUserLastName(response.getUserDetails().getLastName());
@@ -369,7 +426,26 @@ public class UserProfileActivity extends BaseActivity {
                                     sessionManager.updateSessionCircle(response.getUserDetails().getUserAdditionalDetails().getCircleName());
                                     sessionManager.updateSessionState(response.getUserDetails().getUserAdditionalDetails().getStateName());
                                     sessionManager.updateSessionSsa(response.getUserDetails().getUserAdditionalDetails().getSsaName());
-                                    sessionManager.updateSessionCustomer(response.getUserDetails().getUserAdditionalDetails().getCustomerName());
+                                    sessionManager.updateSessionCustomer(response.getUserDetails().getUserAdditionalDetails().getCustomerName());*/
+
+                                    ///
+                                    sessionManager.updateSessionUsername(response.getUserDetails().getUsername());//vendor
+                                    sessionManager.updateSessionUserID(response.getUserDetails().getId());//vendor
+                                    sessionManager.updateSessionUserFirstName(response.getUserDetails().getFirstName());//vendor
+                                    sessionManager.updateSessionUserLastName(response.getUserDetails().getLastName());//vendor
+                                    sessionManager.updateSessionUserEmail(response.getUserDetails().getEmail());//vendor
+                                    sessionManager.updateSessionUserPhoneNo(response.getUserDetails().getPhoneNo());//vendor
+                                    sessionManager.updateSessionProfileImageUrl(response.getUserDetails().getProfileImageUrl());
+
+                                    sessionManager.updateSessionVendorId(response.getUserDetails().getVendorId());//vendor
+                                    sessionManager.updateSessionVendorCode(response.getUserDetails().getVendorCode());//vendor
+                                    sessionManager.updateSessionVendorName(response.getUserDetails().getVendorName());//vendor
+                                    sessionManager.updateSessionVendorAddress(response.getUserDetails().getVendorAddress());//vendor
+                                    sessionManager.updateSessionVendorCity(response.getUserDetails().getVendorCity());//vendor
+                                    sessionManager.updateSessionVendorZipCode(response.getUserDetails().getVendorZipCode());//vendor
+                                    sessionManager.updateSessionVendorState(response.getUserDetails().getVendorState());//vendor
+                                    sessionManager.updateSessionVendorPhoneNo(response.getUserDetails().getVendorPhoneNo());//vendor
+                                    ///
 
                                     setValues();
                                 }
