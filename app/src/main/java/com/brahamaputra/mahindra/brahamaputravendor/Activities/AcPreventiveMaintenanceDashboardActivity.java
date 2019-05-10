@@ -461,6 +461,27 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
     }
 
 
+   /* @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.refresh_icon_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            case R.id.menuRefresh:
+                prepareListData();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }*/
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -476,6 +497,11 @@ public class AcPreventiveMaintenanceDashboardActivity extends BaseActivity {
                 return true;
             case R.id.menuRefresh:
                 prepareListData();
+                return true;
+            case R.id.menuReport:
+                //showToast("Hi...");
+                //prepareListData();
+                startActivity(new Intent(AcPreventiveMaintenanceDashboardActivity.this, PreventiveMaintenanceAcReportDashboardActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

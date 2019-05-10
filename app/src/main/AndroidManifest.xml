@@ -343,6 +343,10 @@
         <activity android:name=".Activities.EbSiteElectrificationList"></activity>
         <activity android:name=".Activities.EbSiteElectrificationTransactionActivity" />
         <activity android:name=".Activities.EbSiteElectrificationElectricConnectionActivity"></activity>
+        <activity android:name=".Activities.PreventiveMaintenanceAcReportDashboardActivity"
+            android:label="Preventive Maintenance AC Report Dashboard"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

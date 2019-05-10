@@ -63,6 +63,8 @@ public class Constants {
     public static String sitePmSiteId = "";
     public static String sitePmSsaName = "";
 
+    public static String sitePmReportType = "0";
+
     public static String androidDeviceid;
 
     // TODO Change it to your web domain
@@ -91,6 +93,10 @@ public class Constants {
     public final static String acPmVendorUserTicketList = BASE_URL.concat("acpm/vendor/getacpmtransactionticketlist");
     public final static String acPmVendorAcDataOnQrCodeScan = BASE_URL.concat("acpm/vendor/acdetailsonqrcode");
     public final static String processedVendorAcPmTicket = BASE_URL.concat("acpm/vendor/processticketbyactechinican");
+
+    /*-- Ac PM Report Section --*/
+    public final static String acPmReportAcList = BASE_URL.concat("acpm/vendor/getvendordashboard");
+    public final static String acPmReportDashboardData = BASE_URL.concat("acpm/vendor/dashboarddetails");
 
 
     ////////////////////////
