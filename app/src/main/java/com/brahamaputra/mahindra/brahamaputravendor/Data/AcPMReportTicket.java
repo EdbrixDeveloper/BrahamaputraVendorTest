@@ -10,6 +10,9 @@ public class AcPMReportTicket {
     @SerializedName("AcPMLastTicketNo")
     @Expose
     private String acPMLastTicketNo;
+    @SerializedName("AcPMTicketDate")
+    @Expose
+    private String acPMTicketDate;
     @SerializedName("AcPMTicketLastDoneDate")
     @Expose
     private String acPMTicketLastDoneDate;
@@ -43,6 +46,14 @@ public class AcPMReportTicket {
 
     public void setAcPMLastTicketNo(String acPMLastTicketNo) {
         this.acPMLastTicketNo = acPMLastTicketNo;
+    }
+
+    public String getAcPMTicketDate() {
+        return acPMTicketDate;
+    }
+
+    public void setAcPMTicketDate(String acPMTicketDate) {
+        this.acPMTicketDate = acPMTicketDate;
     }
 
     public String getAcPMTicketLastDoneDate() {
