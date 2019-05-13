@@ -305,6 +305,11 @@ public class GoogleFirebaseMessagingService extends FirebaseMessagingService {
                 resultIntent = new Intent(getApplicationContext(), DashboardCircularActivity.class);
                 resultIntent.putExtra("typeId", typeId);
 
+            } else if (typeId.equals("7")) {
+
+                resultIntent = new Intent(getApplicationContext(), DashboardCircularActivity.class);
+                resultIntent.putExtra("typeId", typeId);
+
             } else {
 
                 resultIntent = new Intent(getApplicationContext(), DashboardCircularActivity.class);
