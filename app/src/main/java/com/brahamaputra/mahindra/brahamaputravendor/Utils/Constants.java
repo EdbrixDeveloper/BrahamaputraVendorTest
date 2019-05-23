@@ -78,7 +78,8 @@ public class Constants {
 
 
     //private final static String BASE_URL = "http://brahmaputra-dev-api.us-west-2.elasticbeanstalk.com/";
-    private final static String BASE_URL = "http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/";
+    //private final static String BASE_URL = "http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/";
+    private final static String BASE_URL = "http://mahindraapi.ap-south-1.elasticbeanstalk.com/";
 
     //http://mahindradeveb2-api-env.srumj83md3.ap-south-1.elasticbeanstalk.com/auth/vendor/login
 
