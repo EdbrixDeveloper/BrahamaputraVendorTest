@@ -159,7 +159,7 @@ public class DashboardCircularActivity extends BaseActivity implements OnItemSel
                         startActivity(new Intent(DashboardCircularActivity.this, AcPreventiveMaintenanceDashboardActivity.class));
                     }
                 }).show();
-            }else {
+            } else {
                 alertDialogManager = new AlertDialogManager(DashboardCircularActivity.this);
                 alertDialogManager.Dialog("Information", "This is for Default", "Ok", "No", new AlertDialogManager.onSingleButtonClickListner() {
                     @Override
