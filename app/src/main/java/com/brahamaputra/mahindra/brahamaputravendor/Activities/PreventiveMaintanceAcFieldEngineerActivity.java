@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.LocationManager;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -27,15 +26,11 @@ import com.brahamaputra.mahindra.brahamaputravendor.Utils.Conditions;
 import com.brahamaputra.mahindra.brahamaputravendor.Utils.Constants;
 import com.brahamaputra.mahindra.brahamaputravendor.Utils.SessionManager;
 import com.brahamaputra.mahindra.brahamaputravendor.Volley.GsonRequest;
-import com.brahamaputra.mahindra.brahamaputravendor.Volley.SettingsMy;
 import com.brahamaputra.mahindra.brahamaputravendor.baseclass.BaseActivity;
 import com.brahamaputra.mahindra.brahamaputravendor.commons.AlertDialogManager;
 import com.brahamaputra.mahindra.brahamaputravendor.commons.GPSTracker;
-import com.brahamaputra.mahindra.brahamaputravendor.commons.GlobalMethods;
-import com.brahamaputra.mahindra.brahamaputravendor.commons.OfflineStorageWrapper;
 import com.brahamaputra.mahindra.brahamaputravendor.helper.OnSpinnerItemClick;
 import com.brahamaputra.mahindra.brahamaputravendor.helper.SearchableSpinnerDialog;
-import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
@@ -84,14 +79,7 @@ public class PreventiveMaintanceAcFieldEngineerActivity extends BaseActivity {
     private LinearLayout mLinearLayoutParent;
 
     private AlertDialogManager alertDialogManager;
-
-    private String userId = "";
-    private String ticketId = "";
-    private String ticketName = "";
-
-    private OfflineStorageWrapper offlineStorageWrapper;
     private SessionManager sessionManager;
-    String flag = "";
 
     String str_feedBackVal;
     TicktetSubmissionFromFieldEngineerDatum ticktetSubmissionFromFieldEngineerDatum;
@@ -139,19 +127,13 @@ public class PreventiveMaintanceAcFieldEngineerActivity extends BaseActivity {
         if (accessType.equals("S") && ticketAccess.equals("1") && acPmTickStatus.equals("WIP")) {
             invalidateOptionsMenu();
         }
-        //flag = intent.getStringExtra("status");
-
         sessionManager = new SessionManager(PreventiveMaintanceAcFieldEngineerActivity.this);
         gpsTracker = new GPSTracker(PreventiveMaintanceAcFieldEngineerActivity.this);
-        userId = sessionManager.getSessionUserId();
-        //offlineStorageWrapper = OfflineStorageWrapper.getInstance(PreventiveMaintanceAcFieldEngineerActivity.this, userId, ticketName);
         alertDialogManager = new AlertDialogManager(PreventiveMaintanceAcFieldEngineerActivity.this);
         ticktetSubmissionFromFieldEngineerDatum = new TicktetSubmissionFromFieldEngineerDatum();
         assignViews();
         initCombo();
         setDataToFields(intent);
-
-        //setInputDetails();
     }
 
     private void assignViews() {
@@ -429,8 +411,6 @@ public class PreventiveMaintanceAcFieldEngineerActivity extends BaseActivity {
         showBusyProgress();
         String userId = sessionManager.getSessionUserId();
         String accessToken = sessionManager.getSessionDeviceToken();
-        //String siteDbId = "";
-        //String status = "WIP";
 
         try {
             JSONObject jsonString = new JSONObject();
@@ -439,11 +419,6 @@ public class PreventiveMaintanceAcFieldEngineerActivity extends BaseActivity {
             jsonString.put("SitePMAcTicketId", TicketId);
             jsonString.put("Longitude", Longitude);
             jsonString.put("Latitude", Latitude);
-
-            //jsonString.put("Status", status);
-            //jsonString.put("SiteId", siteDbId);//siteCodeId
-            // jsonString.put("Id", siteDbId); //ticketDbId
-            // jsonString.put("SitePMAcTicketNo", siteDbId); //ticketCode
 
             Log.e(PreventiveMaintanceAcFieldEngineerActivity.class.getName(), "WIP JSON : " + jsonString.toString());
 
@@ -563,104 +538,6 @@ public class PreventiveMaintanceAcFieldEngineerActivity extends BaseActivity {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-
-    //No important
-    private void setInputDetails() {
-
-        try {
-            if (offlineStorageWrapper.checkOfflineFileIsAvailable(ticketName + ".txt")) {
-                String jsonInString = (String) offlineStorageWrapper.getObjectFromFile(ticketName + ".txt");
-
-                Gson gson = new Gson();
-                ticktetSubmissionFromFieldEngineerDatum = gson.fromJson(jsonInString, TicktetSubmissionFromFieldEngineerDatum.class);
-
-                mPreventiveMaintanceAcFieldEngineerTextViewCustomerVal.setText(ticktetSubmissionFromFieldEngineerDatum.getCustomer());
-                mPreventiveMaintanceAcFieldEngineerTextViewCircleVal.setText(ticktetSubmissionFromFieldEngineerDatum.getCircle());
-                mPreventiveMaintanceAcFieldEngineerTextViewStateVal.setText(ticktetSubmissionFromFieldEngineerDatum.getState());
-                mPreventiveMaintanceAcFieldEngineerTextViewSsaVal.setText(ticktetSubmissionFromFieldEngineerDatum.getSsa());
-                mPreventiveMaintanceAcFieldEngineerTextViewSiteIDVal.setText(ticktetSubmissionFromFieldEngineerDatum.getSiteId());
-                mPreventiveMaintanceAcFieldEngineerTextViewSiteNameVal.setText(ticktetSubmissionFromFieldEngineerDatum.getSiteName());
-                mPreventiveMaintanceAcFieldEngineerTextViewPmSheduledDateOfAcVal.setText(ticktetSubmissionFromFieldEngineerDatum.getSheduledDateOfAcPm());
-                mPreventiveMaintanceAcFieldEngineerTextViewModeOfOprationVal.setText(ticktetSubmissionFromFieldEngineerDatum.getModeOfOpration());
-                mPreventiveMaintanceAcFieldEngineerTextViewTicketNoVal.setText(ticktetSubmissionFromFieldEngineerDatum.getTicketNo());
-                mPreventiveMaintanceAcFieldEngineerTextViewVendorNameVal.setText(ticktetSubmissionFromFieldEngineerDatum.getVendorName());
-                mPreventiveMaintanceAcFieldEngineerTextViewAcTechnicianNameVal.setText(ticktetSubmissionFromFieldEngineerDatum.getAcTechnicianName());
-                mPreventiveMaintanceAcFieldEngineerTextViewAcTechnicianMobNoVal.setText(ticktetSubmissionFromFieldEngineerDatum.getAcTechnicianMobileNo());
-
-                if (ticktetSubmissionFromFieldEngineerDatum.getTicketStatusToWip().equals("true")) {
-                    mPreventiveMaintanceAcFieldEngineerCheckBoxTicketStatusToWipVal.setChecked(true);
-                } else {
-                    mPreventiveMaintanceAcFieldEngineerCheckBoxTicketStatusToWipVal.setChecked(false);
-                }
-                mPreventiveMaintanceAcFieldEngineerTextViewStatusSubmittedByTechnicianVal.setText(ticktetSubmissionFromFieldEngineerDatum.getStatus());
-                mPreventiveMaintanceAcFieldEngineerTextViewDateSubmittedByTechnicianVal.setText(ticktetSubmissionFromFieldEngineerDatum.getSubmittedDate());
-                mPreventiveMaintanceAcFieldEngineerTextViewFeedBackVal.setText(ticktetSubmissionFromFieldEngineerDatum.getFeedBack());
-                mPreventiveMaintanceAcFieldEngineerEditTextRemark.setText(ticktetSubmissionFromFieldEngineerDatum.getRemark());
-
-
-            }
-        } catch (Exception e) {
-
-        }
-
-    }
-
-    private void clearFields() {
-        mPreventiveMaintanceAcFieldEngineerTextViewFeedBackVal.setText("");
-        mPreventiveMaintanceAcFieldEngineerEditTextRemark.setText("");
-        mPreventiveMaintanceAcFieldEngineerCheckBoxTicketStatusToWipVal.setChecked(false);
-    }
-
-    public void submitFieldEngineerAcPmSiteTicket() {
-        try {
-            if (offlineStorageWrapper.checkOfflineFileIsAvailable(GlobalMethods.replaceAllSpecialCharAtUnderscore(ticketName) + ".txt")) {
-
-                showBusyProgress();
-                String jsonInString = (String) offlineStorageWrapper.getObjectFromFile(GlobalMethods.replaceAllSpecialCharAtUnderscore(ticketName) + ".txt");
-                Log.e("123", jsonInString);
-
-                GsonRequest<TicktetSubmissionFromFieldEngineerDatum> submitSitePmAcTicketRequest = new GsonRequest<>(Request.Method.POST, Constants.submitSitePMTicket, jsonInString, TicktetSubmissionFromFieldEngineerDatum.class,
-                        new Response.Listener<TicktetSubmissionFromFieldEngineerDatum>() {
-                            @Override
-                            public void onResponse(@NonNull TicktetSubmissionFromFieldEngineerDatum response) {
-                                hideBusyProgress();
-                                if (response.getError() != null) {
-                                    showToast(response.getError().getErrorMessage());
-                                } else {
-                                    if (response.getSuccess() == 1) {
-                                        showToast("Ticket submitted successfully.");
-                                        sessionManager.updateSessionUserTicketId(null);
-                                        sessionManager.updateSessionUserTicketName(null);
-                                        setResult(RESULT_OK);
-                                        removeOfflineCache();
-                                        finish();
-                                    }
-                                }
-
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        hideBusyProgress();
-                        showToast(SettingsMy.getErrorMessage(error));
-                    }
-                });
-
-                submitSitePmAcTicketRequest.setRetryPolicy(Application.getDefaultRetryPolice());
-                submitSitePmAcTicketRequest.setShouldCache(false);
-                Application.getInstance().addToRequestQueue(submitSitePmAcTicketRequest, "submitSitePmTicketRequest");
-            }
-        } catch (Exception e) {
-
-        }
-    }
-
-    private void removeOfflineCache() {
-        if (offlineStorageWrapper.checkOfflineFileIsAvailable(GlobalMethods.replaceAllSpecialCharAtUnderscore(ticketName) + ".txt")) {
-            offlineStorageWrapper.removedOffLineFile(GlobalMethods.replaceAllSpecialCharAtUnderscore(ticketName) + ".txt");
         }
     }
 
